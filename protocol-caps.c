@@ -119,6 +119,6 @@ int object_info_advertise(struct repository *r, struct strbuf *value)
 {
 	if (advertise_object_info == -1 &&
 		git_config_get_bool("transfer.advertiseObjectInfo", &advertise_object_info))
-		advertise_object_info = 0;
+		advertise_object_info = 1;
 	return advertise_object_info;
 }
